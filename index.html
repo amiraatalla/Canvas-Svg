@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form>
+        <table>
+            <tr>
+                <td><input type="text" id="coursename1"></td>
+                <td><input type="number" id="coursevalue1" min="0"></td>
+                <td><input type="color" id="coursecolor1"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="coursename2"></td>
+                <td><input type="number" id="coursevalue2" min="0"></td>
+                <td><input type="color" id="coursecolor2"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="coursename3"></td>
+                <td><input type="number" id="coursevalue3" min="0"></td>
+                <td><input type="color" id="coursecolor3"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="coursename4"></td>
+                <td><input type="number" id="coursevalue4" min="0"></td>
+                <td><input type="color" id="coursecolor4"></td>
+            </tr>
+            <td><input type="button" id="draw" value="Pie"></td>
+            <td><input type="button" id="drawdug" value="Doughnut"></td>
+            <td><input type="button" id="drawline" value="Line"></td>
+            <td><input type="button" id="drawbar" value="Bar"></td>
+
+            </tr>
+        </table>
+    </form>
+
+    <canvas id="piecanvas"> </canvas>
+    <br>
+    <br>
+    <canvas id="dunatcanvas"> </canvas>
+    <br>
+    <br>
+    <svg id="barsvg" width="500" height="500">
+        <rect x="60" width="400" height="400" stroke="black" fill="none"></rect>
+        <g>
+            <text x="30" y="400">0</text>
+            <text x="30" y="360">10</text>
+            <text x="30" y="320">20</text>
+            <text x="30" y="280">30</text>
+            <text x="30" y="240">40</text>
+            <text x="30" y="200">50</text>
+            <text x="30" y="160">60</text>
+            <text x="30" y="120">70</text>
+            <text x="30" y="80">80</text>
+            <text x="30" y="40">90</text>
+            <text x="30" y="0">100</text>
+        </g>
+        <g>
+            <rect x="80" width="30" id="course1"></rect>
+            <rect x="130" width="30" id="course2"></rect>
+            <rect x="180" width="30" id="course3"></rect>
+            <rect x="230" width="30" id="course4"></rect>
+        </g>
+        <g id="courseNameBar"></g>
+    </svg>
+    <br>
+    <br>
+    <svg id="linesvg" width="500" height="500">
+        <rect x="60" width="400" height="400" stroke="black" fill="none"></rect>
+        <g>
+            <text x="30" y="400">0</text>
+            <text x="30" y="360">10</text>
+            <text x="30" y="320">20</text>
+            <text x="30" y="280">30</text>
+            <text x="30" y="240">40</text>
+            <text x="30" y="200">50</text>
+            <text x="30" y="160">60</text>
+            <text x="30" y="120">70</text>
+            <text x="30" y="80">80</text>
+            <text x="30" y="40">90</text>
+            <text x="30" y="0">100</text>
+        </g>
+        <g>
+            <polyline stroke-width="1" stroke="black" id="courses" fill="none"></polyline>
+
+        </g>
+        <g id="courseNameLine">
+        </g>
+    </svg>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
